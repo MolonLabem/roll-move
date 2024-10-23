@@ -1,0 +1,6 @@
+@roll_move.Server_HostAddress = http://localhost:5253
+
+GET {{roll_move.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

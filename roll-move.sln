@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "roll-move.Server", "roll-move.Server\roll-move.Server.csproj", "{20F9742C-6535-4589-AFA2-42BB9AB0084C}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "roll-move.client", "roll-move.client\roll-move.client.esproj", "{25784C09-59F3-446E-8B52-766A684CF838}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20F9742C-6535-4589-AFA2-42BB9AB0084C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20F9742C-6535-4589-AFA2-42BB9AB0084C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20F9742C-6535-4589-AFA2-42BB9AB0084C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20F9742C-6535-4589-AFA2-42BB9AB0084C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25784C09-59F3-446E-8B52-766A684CF838}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25784C09-59F3-446E-8B52-766A684CF838}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25784C09-59F3-446E-8B52-766A684CF838}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{25784C09-59F3-446E-8B52-766A684CF838}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25784C09-59F3-446E-8B52-766A684CF838}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25784C09-59F3-446E-8B52-766A684CF838}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5AF7A493-1A6C-4159-B490-4B5B4416801D}
+	EndGlobalSection
+EndGlobal
