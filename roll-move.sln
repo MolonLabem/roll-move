@@ -3,9 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "roll-move.Server", "roll-move.Server\roll-move.Server.csproj", "{20F9742C-6535-4589-AFA2-42BB9AB0084C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "roll-move.Server", "roll-move.Server\roll-move.Server.csproj", "{20F9742C-6535-4589-AFA2-42BB9AB0084C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C98C34EA-8EEF-415B-8177-32CA112207FC} = {C98C34EA-8EEF-415B-8177-32CA112207FC}
+	EndProjectSection
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "roll-move.client", "roll-move.client\roll-move.client.esproj", "{25784C09-59F3-446E-8B52-766A684CF838}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "roll-move-functions", "roll-move-functions\roll-move-functions.csproj", "{C98C34EA-8EEF-415B-8177-32CA112207FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +28,10 @@ Global
 		{25784C09-59F3-446E-8B52-766A684CF838}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25784C09-59F3-446E-8B52-766A684CF838}.Release|Any CPU.Build.0 = Release|Any CPU
 		{25784C09-59F3-446E-8B52-766A684CF838}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C98C34EA-8EEF-415B-8177-32CA112207FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C98C34EA-8EEF-415B-8177-32CA112207FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C98C34EA-8EEF-415B-8177-32CA112207FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C98C34EA-8EEF-415B-8177-32CA112207FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

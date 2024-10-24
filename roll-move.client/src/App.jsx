@@ -1,49 +1,44 @@
-import { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import TableOverview from './components/TableOverview';
+import ReservationForm from './components/ReservationForm';
+import ClubStatus from './components/ClubStatus';
+import TournamentList from './components/TournamentList';
+import CollectionPage from './components/CollectionPage';
+
 import './App.css';
 
 function App() {
-    const [forecasts, setForecasts] = useState();
-
-    useEffect(() => {
-        populateWeatherData();
-    }, []);
-
-    const contents = forecasts === undefined
-        ? <p><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationreact">https://aka.ms/jspsintegrationreact</a> for more details.</em></p>
-        : <table className="table table-striped" aria-labelledby="tableLabel">
-            <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Temp. (C)</th>
-                    <th>Temp. (F)</th>
-                    <th>Summary</th>
-                </tr>
-            </thead>
-            <tbody>
-                {forecasts.map(forecast =>
-                    <tr key={forecast.date}>
-                        <td>{forecast.date}</td>
-                        <td>{forecast.temperatureC}</td>
-                        <td>{forecast.temperatureF}</td>
-                        <td>{forecast.summary}</td>
-                    </tr>
-                )}
-            </tbody>
-        </table>;
-
     return (
         <div>
-            <h1 id="tableLabel">Weather forecast</h1>
-            <p>This component demonstrates fetching data from the server.</p>
-            {contents}
+            <h1 id="tableLabel">Roll Move</h1>
+            <p>Greatest club in Astana</p>
+            <Router>
+                <nav>
+                    <ul>
+                        <li>
+                            <Link to="/tournaments">Tournaments</Link>
+                        </li>
+                        <li>
+                            <Link to="/collection">Collection</Link>
+                        </li>
+                    </ul>
+                </nav>
+
+                {/* Main Screen - Club Status and Table Overview */}
+                <div id="mainScreen">
+                    <ClubStatus />
+                    <TableOverview />
+                </div>
+
+                {/* Routes for separate pages */}
+                <Routes>
+                    <Route path="/reservation" element={<ReservationForm />} />
+                    <Route path="/tournaments" element={<TournamentList />} />
+                    <Route path="/collection" element={<CollectionPage />} />
+                </Routes>
+            </Router>
         </div>
     );
-    
-    async function populateWeatherData() {
-        const response = await fetch('weatherforecast');
-        const data = await response.json();
-        setForecasts(data);
-    }
 }
 
 export default App;
